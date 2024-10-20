@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Regex Matcher</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Regex Matcher</h1>
+  <form method="POST" action="/results">
+    <label for="test_string">Test String:</label>
+    <input type="text" id="test_string" name="test_string" required><br>
+    <label for="regex">Regular Expression:</label>
+    <input type="text" id="regex" name="regex" required><br>
+    <button type="submit">Find Matches</button>
+  </form>
+  <br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" required style="width: 50%;"><br>
+  <button type="button" onclick="validateEmail()">Validate Email</button>
+  <div id="validation-result"></div>
+  <h2>Matches</h2>
+  <ul>
+    {% for match in matches %}
+      <li>{{ match }}</li>
+    {% endfor %}
+  </ul>
+  <script>
+    function validateEmail() {
+      var email = document.getElementById("email").value;
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "/validate_email", true);
+      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          document.getElementById("validation-result").textContent = xhr.responseText;
+        } else {
+          console.error("Error validating email:", xhr.status, xhr.statusText);
+        }
+      };
+      xhr.send("email=" + email);
+    }
+  </script>
+</body>
+</html>
