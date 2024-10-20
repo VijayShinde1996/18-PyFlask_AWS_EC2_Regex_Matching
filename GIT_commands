@@ -1,0 +1,42 @@
+1. Create a GitHub Repository:
+
+Go to GitHub and sign in to your account.
+Click the plus sign (+) in the top right corner and select "New repository."
+Give your repository a descriptive name (e.g., "regex-matcher-app").
+Add a brief description.
+Choose a repository license (e.g., MIT).
+Click "Create repository."
+2. Initialize Git in Your VS Code Project:
+
+Open your VS Code project folder.
+Open the terminal in VS Code (Ctrl+` or View -> Terminal).
+Run the following command to initialize Git in your project:
+Bash
+git init
+Use code with caution.
+
+3. Add Files to Git:
+
+In the terminal, run the following command to add all files in your project to Git:
+Bash
+git add .
+Use code with caution.
+
+4. Commit Changes:
+
+In the terminal, run the following command to commit the added files:
+Bash
+git commit -m "Initial commit"
+Use code with caution.
+
+Replace "Initial commit" with a meaningful commit message.
+5. Connect to GitHub Repository:
+
+In VS Code, open the Source Control panel (Ctrl+Shift+G).
+Click the "Publish" button in the Source Control panel.
+Enter the URL of your GitHub repository (e.g., https://github.com/your_username/regex-matcher-app.git).
+Click "Publish."
+6. Push Changes to GitHub:
+
+In the Source Control panel, you should see a message indicating that the repository has been published.
+Click the "Sync" button to push your local changes to the remote GitHub repository.
