@@ -14,7 +14,7 @@ This is a web application built with Flask that allows users to input a test str
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/your_username/regex-matcher-app.git](https://github.com/your_username/regex-matcher-app.git)
+   git clone [https://github.com/VijayShinde1996/PyFlask_AWS_EC2_Regex_Matching.git] (https://github.com/VijayShinde1996/PyFlask_AWS_EC2_Regex_Matching.git)
 Use code with caution.
 
 Install dependencies:
